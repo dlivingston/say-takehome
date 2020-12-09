@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     getData().then(response => {
       const newSRarray = []
-      response.map(item => {
+      response.forEach(item => {
         if(newSRarray.findIndex(o => o.id === item.data.subreddit_id) === -1) {
           newSRarray.push({
             id: item.data.subreddit_id,
